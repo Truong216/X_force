@@ -6,6 +6,8 @@ import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import Color from '../components/Color'; 
+import { color } from 'react-native-reanimated';
 
 export default function DetailsScreen({ navigation }) {
     return (
@@ -14,18 +16,18 @@ export default function DetailsScreen({ navigation }) {
         <View style={styles.menu_chose}>
           <View style={styles.menu_chose_first}> 
             <View style={{flexDirection: 'row', alignItems: "center"}}>
-              <MaterialCommunityIcons name="sort-descending" size={24} color="pink" />
+              <MaterialCommunityIcons name="sort-descending" size={24} color={Color.primary} />
               <Text style={{fontSize: 14, paddingLeft: 3}}>Sắp xếp</Text>
             </View>
             <View style={{flexDirection: 'row', alignItems: "center", marginLeft: 10}}>
-              <MaterialCommunityIcons name="sort-descending" size={24} color="pink" />
+              <MaterialCommunityIcons name="sort-descending" size={24} color={Color.primary} />
               <Text style={{fontSize: 14, paddingLeft:3}}>Bộ lọc</Text>
             </View>
           </View>
           <View style={styles.menu_chose_second}>
             <View style={styles.menu_chose_second_icon}>
-              <FontAwesome5 name="th-list" size={20} color="pink" style={{backgroundColor: 'grey', padding: '10%'}}/>
-              <MaterialCommunityIcons name="map-marker-radius" size={20} color="black" style={{ padding: '10%'}}/>
+              <FontAwesome5 name="th-list" size={20} color={Color.primary} style={{backgroundColor: 'grey', padding: '10%'}}/>
+              <MaterialCommunityIcons name="map-marker-radius" size={20} color={Color.primary} style={{ padding: '10%'}}/>
             </View>
           </View>
         </View>
@@ -34,97 +36,31 @@ export default function DetailsScreen({ navigation }) {
           <View style={styles.card}>
             <View style={styles.card_Img}>
               <Image style={styles.Image} source={require('../assets/Hotel1.jpg')}/>
+              <View style={styles.card_heart}>
+                <AntDesign name="hearto" size={14} color={Color.primary} style={{padding: 10}}/>
+              </View>
             </View>
-            <View style={styles.card_Info}>
+             <View style={styles.card_Info}>
               <View style={styles.card_row_1}>
-                <View style={styles.card_title}>
-                    <Image style={styles.card_title_img} source={require('../assets/Dinogo.jpeg')} />  
-                  <Text  style={{fontSize: 12, fontWeight: "bold", color: '#f60053',  textAlign: 'left', marginLeft: 20}}>Cozrum Homes Trương Định</Text>
+                <View>
+                  <Text numberOfLines= {2} style={{fontSize: 14, fontWeight: "bold", color: '#111',  textAlign: 'left', marginLeft: 10}}>Cozrum Homes Trương Định lalaadfàdfd ad adf adfa àdđlanlesterd richhhghghg</Text>
+                  <Text numberOfLines= {2} style={{fontSize: 11, color: 'grey', marginLeft: 10}}>73 Trương Định, Quận 3, Hồ Chí Minh lalaadfàdfd ad adf adfa àdđlanlesterd richhhghghg</Text>
                 </View>
-                <View style={styles.card_heart}>
-                  <AntDesign name="hearto" size={18} color="black" />
-                </View>
-              </View>
-              <View style={styles.card_row_2}>
-                <Text style={{fontSize: 11, color: 'grey', paddingLeft: 10}}>73 Trương Định, Quận 3, Hồ Chí Minh</Text>
-                <View style={{flexDirection: 'row', paddingLeft: 15, paddingTop: 10}}>
-                  <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
-                  <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
-                  <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
-                  <Text style={{color:'white', marginLeft: 7, fontSize: 12,paddingLeft: 5,paddingRight: 5, borderColor: 'black',backgroundColor: 'grey'}}>9.0</Text>
-                  <Text style={{color: 'grey', marginLeft: 7, fontSize: 12, fontWeight: 'bold'}}>Tuyệt vời</Text>
-                </View>
-              </View>
-              <View style={styles.card_row_3}>
-                <View style={{height: 40, width: 200, borderRadius: 7, backgroundColor: 'lightblue', marginLeft: 13}}>
-                  <Text style={{textAlign: 'right', fontSize: 15, paddingTop: 3, paddingRight: 7}}>431.707 đ/Đêm</Text>
-                  <Text style={{textAlign: 'right', fontSize: 12, paddingTop: 2, paddingRight: 7}}>Đã bao gồm thuế phí</Text>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View style={styles.card}>
-            <View style={styles.card_Img}>
-            <Image style={styles.Image} source={require('../assets/Hotel1.jpg')}/>
-            </View>
-            <View style={styles.card_Info}>
-            <View style={styles.card_row_1}>
-                <View style={styles.card_title}>
-                  <Image style={styles.card_title_img} source={require('../assets/Dinogo.jpeg')} />
-                  <Text  style={{fontSize: 12, fontWeight: "bold", color: '#f60053', textAlign: 'left', marginLeft: 20}}>Cozrum Lux Hotel by Olive</Text>
-                </View>
-                <View style={styles.card_heart}>
-                  <AntDesign name="hearto" size={18} color="black" />
+                <View style={{flexDirection: 'row', marginLeft: 10}}>
+                  <FontAwesome name="star" size={13} color={Color.primary} style={{paddingRight: 1}}/>
+                  <FontAwesome name="star" size={13} color={Color.primary} style={{paddingRight: 1}}/>
+                  <FontAwesome name="star" size={13} color={Color.primary} style={{paddingRight: 1}}/>    
+                  <FontAwesome name="star-o" size={13} color={Color.primary} style={{paddingRight: 1}}/>
+                  <FontAwesome name="star-o" size={13} color={Color.primary} style={{paddingRight: 1}}/>    
+                  <Text style={{color:'white', marginLeft: 7, fontSize: 12,paddingLeft: 5,paddingRight: 5, borderColor: 'black',backgroundColor: Color.primary}}>9.0</Text>
                 </View>
               </View>
               <View style={styles.card_row_2}>
-                <Text style={{fontSize: 11, color: 'grey', paddingLeft: 10}}>TK15/13 Nguyễn Cảnh Chân, Quận 1,  Hồ Chí Minh</Text>
-                <View style={{flexDirection: 'row', paddingLeft: 15, paddingTop: 10}}>
-                  <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
-                  <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
-                  <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
-                  <Text style={{color:'white', marginLeft: 7, fontSize: 12,paddingLeft: 5,paddingRight: 5, borderColor: 'black',backgroundColor: 'grey'}}>8.7</Text>
-                  <Text style={{color: 'grey', marginLeft: 7, fontSize: 12, fontWeight: 'bold'}}>Rất tốt</Text>
-                </View>
+                <Text style={{fontSize: 15, fontWeight: 'bold'}}>435.000 đ</Text>
+                <Text style={{}}>/Đêm</Text>
               </View>
-              <View style={styles.card_row_3}>
-                <View style={{height: 40, width: 200, borderRadius: 7, backgroundColor: 'lightblue', marginLeft: 13}}>
-                  <Text style={{textAlign: 'right', fontSize: 15, paddingTop: 3, paddingRight: 7}}>431.707 đ/Đêm</Text>
-                  <Text style={{textAlign: 'right', fontSize: 12, paddingTop: 2, paddingRight: 7}}>Đã bao gồm thuế phí</Text>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View style={styles.card}>
-            <View style={styles.card_Img}>
-            <Image style={styles.Image} source={require('../assets/Hotel1.jpg')}/>
-            </View>
-            <View style={styles.card_Info}>
-            <View style={styles.card_row_1}>
-                <View style={styles.card_title}>
-                  <Image style={styles.card_title_img} source={require('../assets/Dinogo.jpeg')} />
-                  <Text  style={{fontSize: 12, fontWeight: "bold", color: '#f60053', textAlign: 'left', marginLeft: 20}}>Cozrum Homes Riverside Bến Vân Đồn</Text>
-                </View>
-                <View style={styles.card_heart}>
-                  <AntDesign name="hearto" size={18} color="black" />
-                </View>
-              </View>
-              <View style={styles.card_row_2}>
-                <Text style={{fontSize: 11, color: 'grey', paddingLeft: 10}}>80A Bến Vân Đồn, Quận 4, Hồ Chí Minh</Text>
-                <View style={{flexDirection: 'row', paddingLeft: 15, paddingTop: 10}}>
-                  <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
-                  <Text style={{color:'white', marginLeft: 7, fontSize: 12,paddingLeft: 5,paddingRight: 5, borderColor: 'black',backgroundColor: 'grey'}}>8.7</Text>
-                  <Text style={{color: 'grey', marginLeft: 7, fontSize: 12, fontWeight: 'bold'}}>Rất tốt</Text>
-                </View>
-              </View>
-              <View style={styles.card_row_3}>
-                <View style={{height: 40, width: 200, borderRadius: 7, backgroundColor: 'lightblue', marginLeft: 13}}>
-                  <Text style={{textAlign: 'right', fontSize: 15, paddingTop: 3, paddingRight: 7}}>431.707 đ/Đêm</Text>
-                  <Text style={{textAlign: 'right', fontSize: 12, paddingTop: 2, paddingRight: 7}}>Đã bao gồm thuế phí</Text>
-                </View>
-              </View>
-            </View>
-          </View>
+            </View> 
+          </View> 
         </ScrollView>
         </View>
       </SafeAreaView>
@@ -184,10 +120,9 @@ const styles = StyleSheet.create({
     paddingTop: 10
   },
   card: {
-    flexDirection: "row",
     flex: 1,
     width: 340,
-    height: 185,
+    height: 250,
     backgroundColor: "#fff",
     borderRadius: 10,
     marginBottom: 12,
@@ -203,23 +138,27 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   card_Img: {
-    flex: 0.35,
-  },
-  Image: {
-    width: 119,
-    height: 185,
-    borderTopLeftRadius: 10,
-    borderBottomLeftRadius: 10
-  },
-  card_Info: {
     flex: 0.65,
   },
-  card_row_1: {
-    flex: 0.25,
+  Image: {
+    width: '100%',
+    height: '100%',
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10
+  },
+  card_Info: {
+    flex: 0.35,
     flexDirection: 'row',
+    justifyContent: "space-around"
+  },
+  card_row_1: {
+    flex: 0.65,
+    justifyContent: 'space-around',
   },
   card_row_2: {
-    flex: 0.5,
+    flex: 0.3,
+    justifyContent: "center",
+    alignItems: "center",
   },
   card_row_3: {
     flex: 0.25,
@@ -233,17 +172,12 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     position: "relative",
   },
-  card_title_img:{
-    width: 18,
-    height: 18,
-    borderRadius: 10,
-    position: "absolute",
-    top: 7,
-    left: 10,
-
-  },
   card_heart: {
-    flex: 0.2,
+    position: 'absolute',
+    right: 15,
+    top: 15,
+    backgroundColor: '#fff',
+    borderRadius: 90,
     justifyContent: "center",
     alignItems: "center"
   },

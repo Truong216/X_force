@@ -3,12 +3,13 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, TouchableWithoutFeedback, ScrollView, Dimensions, Image  } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 const wd = Dimensions.get('window').width;
 export default function HomeScreen({ navigation }) {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="dark-content" />
-        <ScrollView style={styles.scrollView_container}>
+        <ScrollView style={styles.scrollView_container} >
           <View style={styles.booking_container}>
             <View style={styles.booking_padding}>
               <View style={{flexDirection: 'row'}}>
@@ -53,7 +54,7 @@ export default function HomeScreen({ navigation }) {
             <View style={styles.city_footer}>
               <Image style={{ height: 50, width: 80}} source={require('../assets/map_maker.jpg')}/>
               <View style={{paddingLeft: 12, paddingTop: 7}}>
-                <Text style={{fontWeight: 'bold', fontSize: 16}}>Điểm Đến Hàng Đầu</Text>
+                <Text style={{fontWeight: 'bold', fontSize: 16}}>ĐIỂM ĐẾN HÀNG ĐẦU</Text>
                 <Text style={{fontSize: 12, color: 'grey', paddingTop: 5}}>Những thành phố nổi tiếng</Text>
               </View>
             </View>
@@ -78,6 +79,128 @@ export default function HomeScreen({ navigation }) {
                   <View style={styles.city_img_background}>
                      <Text style={styles.city_name}>Hà Nội</Text> 
                      <Text style={styles.city_hotel}>3557 khách sạn</Text> 
+                  </View>
+                </View>
+              </ScrollView>
+            </View>
+          </View>
+          <View style={styles.suggestion_container}>
+            <View style={styles.suggestion_footer}>
+              <Image style={{ height: 50, width: 80}} source={require('../assets/recommend.jpg')}/>
+              <View style={{paddingLeft: 12, paddingTop: 7}}>
+                <Text style={{fontWeight: 'bold', fontSize: 16}}>KHÁCH SẠN QUANH ĐÂY</Text>
+                <Text style={{fontSize: 12, color: 'grey', paddingTop: 5}}>Tìm khách sạn quanh đây</Text>
+              </View>
+            </View>
+            <View>
+              <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{margin: 10}}>
+                <View style={styles.suggestion_first}>
+                  <Image style={styles.suggestion_img} source={require('../assets/Ha_Noi.jpg')}/>
+                  <View style={styles.suggestion_img_background}>
+                    <Text style={styles.suggestion_name}>Cereja Hotel {'&'} Resort Đà Lạt by</Text> 
+                    <View style={{flexDirection: 'row', paddingLeft: 10, marginTop: 20}}>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <Text style={{color:'white', marginLeft: 7, fontSize: 12,paddingLeft: 5,paddingRight: 5, borderColor: 'black',backgroundColor: 'grey'}}>9.0</Text>
+                    </View>
+                    <Text style={{fontSize: 12, color: 'grey', paddingLeft: 10, marginTop: 10, paddingBottom: 10}}>73 Trương Định, Quận 3, Hồ Chí Minh</Text>
+                  </View>
+                  <View style={{justifyContent: "center", borderTopColor: '#111', borderTopWidth: 0.5, height: 62}}>
+                    <Text style={{textAlign: "right", fontSize: 10, paddingRight: 12}}>Nhập mã X_force còn 933.000 đ</Text>
+                  </View>
+                </View>
+                <View style={styles.suggestion_scrollView}>
+                  <Image style={styles.suggestion_img} source={require('../assets/Ha_Noi.jpg')}/>
+                  <View style={styles.suggestion_img_background}>
+                    <Text style={styles.suggestion_name}>Cereja Hotel {'&'} Resort Đà Lạt by</Text> 
+                    <View style={{flexDirection: 'row', paddingLeft: 10, marginTop: 20}}>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <Text style={{color:'white', marginLeft: 7, fontSize: 12,paddingLeft: 5,paddingRight: 5, borderColor: 'black',backgroundColor: 'grey'}}>9.0</Text>
+                    </View>
+                    <Text style={{fontSize: 12, color: 'grey', paddingLeft: 10, marginTop: 10, paddingBottom: 10}}>73 Trương Định, Quận 3, Hồ Chí Minh</Text>
+                  </View>
+                  <View style={{justifyContent: "center", borderTopColor: '#111', borderTopWidth: 0.5, height: 62}}>
+                    <Text style={{textAlign: "right", fontSize: 10, paddingRight: 12}}>Nhập mã X_force còn 933.000 đ</Text>
+                  </View>
+                </View>
+                <View style={styles.suggestion_scrollView}>
+                  <Image style={styles.suggestion_img} source={require('../assets/Ha_Noi.jpg')}/>
+                  <View style={styles.suggestion_img_background}>
+                    <Text style={styles.suggestion_name}>Cereja Hotel {'&'} Resort Đà Lạt by</Text> 
+                    <View style={{flexDirection: 'row', paddingLeft: 10, marginTop: 20}}>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <Text style={{color:'white', marginLeft: 7, fontSize: 12,paddingLeft: 5,paddingRight: 5, borderColor: 'black',backgroundColor: 'grey'}}>9.0</Text>
+                    </View>
+                    <Text style={{fontSize: 12, color: 'grey', paddingLeft: 10, marginTop: 10, paddingBottom: 10}}>73 Trương Định, Quận 3, Hồ Chí Minh</Text>
+                  </View>
+                  <View style={{justifyContent: "center", borderTopColor: '#111', borderTopWidth: 0.5, height: 62}}>
+                    <Text style={{textAlign: "right", fontSize: 10, paddingRight: 12}}>Nhập mã X_force còn 933.000 đ</Text>
+                  </View>
+                </View>
+              </ScrollView>
+            </View>
+          </View>
+          <View style={styles.suggestion_container}>
+            <View style={styles.suggestion_footer}>
+              <Image style={{ height: 50, width: 80}} source={require('../assets/recommend.jpg')}/>
+              <View style={{paddingLeft: 12, paddingTop: 7}}>
+                <Text style={{fontWeight: 'bold', fontSize: 16}}>KHÁCH SẠN QUANH ĐÂY</Text>
+                <Text style={{fontSize: 12, color: 'grey', paddingTop: 5}}>Tìm khách sạn quanh đây</Text>
+              </View>
+            </View>
+            <View>
+              <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{margin: 10}}>
+                <View style={styles.suggestion_first}>
+                  <Image style={styles.suggestion_img} source={require('../assets/Ha_Noi.jpg')}/>
+                  <View style={styles.suggestion_img_background}>
+                    <Text style={styles.suggestion_name}>Cereja Hotel {'&'} Resort Đà Lạt by</Text> 
+                    <View style={{flexDirection: 'row', paddingLeft: 10, marginTop: 20}}>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <Text style={{color:'white', marginLeft: 7, fontSize: 12,paddingLeft: 5,paddingRight: 5, borderColor: 'black',backgroundColor: 'grey'}}>9.0</Text>
+                    </View>
+                    <Text style={{fontSize: 12, color: 'grey', paddingLeft: 10, marginTop: 10, paddingBottom: 10}}>73 Trương Định, Quận 3, Hồ Chí Minh</Text>
+                  </View>
+                  <View style={{justifyContent: "center", borderTopColor: '#111', borderTopWidth: 0.5, height: 62}}>
+                    <Text style={{textAlign: "right", fontSize: 10, paddingRight: 12}}>Nhập mã X_force còn 933.000 đ</Text>
+                  </View>
+                </View>
+                <View style={styles.suggestion_scrollView}>
+                  <Image style={styles.suggestion_img} source={require('../assets/Ha_Noi.jpg')}/>
+                  <View style={styles.suggestion_img_background}>
+                    <Text style={styles.suggestion_name}>Cereja Hotel {'&'} Resort Đà Lạt by</Text> 
+                    <View style={{flexDirection: 'row', paddingLeft: 10, marginTop: 20}}>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <Text style={{color:'white', marginLeft: 7, fontSize: 12,paddingLeft: 5,paddingRight: 5, borderColor: 'black',backgroundColor: 'grey'}}>9.0</Text>
+                    </View>
+                    <Text style={{fontSize: 12, color: 'grey', paddingLeft: 10, marginTop: 10, paddingBottom: 10}}>73 Trương Định, Quận 3, Hồ Chí Minh</Text>
+                  </View>
+                  <View style={{justifyContent: "center", borderTopColor: '#111', borderTopWidth: 0.5, height: 62}}>
+                    <Text style={{textAlign: "right", fontSize: 10, paddingRight: 12}}>Nhập mã X_force còn 933.000 đ</Text>
+                  </View>
+                </View>
+                <View style={styles.suggestion_scrollView}>
+                  <Image style={styles.suggestion_img} source={require('../assets/Ha_Noi.jpg')}/>
+                  <View style={styles.suggestion_img_background}>
+                    <Text style={styles.suggestion_name}>Cereja Hotel {'&'} Resort Đà Lạt by</Text> 
+                    <View style={{flexDirection: 'row', paddingLeft: 10, marginTop: 20}}>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <FontAwesome name="star" size={13} color="orange" style={{paddingRight: 1}}/>
+                      <Text style={{color:'white', marginLeft: 7, fontSize: 12,paddingLeft: 5,paddingRight: 5, borderColor: 'black',backgroundColor: 'grey'}}>9.0</Text>
+                    </View>
+                    <Text style={{fontSize: 12, color: 'grey', paddingLeft: 10, marginTop: 10, paddingBottom: 10}}>73 Trương Định, Quận 3, Hồ Chí Minh</Text>
+                  </View>
+                  <View style={{justifyContent: "center", borderTopColor: '#111', borderTopWidth: 0.5, height: 62}}>
+                    <Text style={{textAlign: "right", fontSize: 10, paddingRight: 12}}>Nhập mã X_force còn 933.000 đ</Text>
                   </View>
                 </View>
               </ScrollView>
@@ -185,7 +308,7 @@ const styles = StyleSheet.create({
   },
   button: { 
     width: 190, 
-    backgroundColor: '#f60053', 
+    backgroundColor: '#54d3c2', 
     height: 40,
     justifyContent: "center", 
     alignItems: "center", 
@@ -238,5 +361,45 @@ const styles = StyleSheet.create({
     position: 'absolute', 
     left: 5, 
     bottom: 4
+  },
+  suggestion_container: {
+    marginTop: 10, 
+    width: wd, 
+    height: 410, 
+    backgroundColor: '#fff'
+  },
+  suggestion_first: {
+    marginLeft: 10,
+    height: 300,
+    borderColor: 'grey',
+    borderRadius: 12,
+    borderWidth: 1,
+  },
+  suggestion_scrollView: {
+    marginLeft: 20,
+    height: 300,
+    borderColor: 'grey',
+    borderRadius: 12,
+    borderWidth: 1,
+  },
+  suggestion_footer: {
+    flexDirection: 'row', 
+    margin: 10, 
+    alignItems: "center"
+  },
+  suggestion_img: {
+      height: 150, 
+      width: 240, 
+      borderTopRightRadius: 10,
+      borderTopLeftRadius: 10
+  },
+  suggestion_name: {
+    fontWeight: 'bold', 
+    fontSize: 14, 
+    bottom: - 10,
+    left: 10,
+  },
+  suggestion_hotel: { 
+    left: 5, 
   },
 });  

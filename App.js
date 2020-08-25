@@ -4,38 +4,47 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screen/HomeScreen'
 import DetailsScreen from './screen/DetailsScreen'
+import WelcomeScreen from './screen/Welcome'
 import LogoTitle from './components/LogoTitle'
 import HomeTitle from './components/HomeTitle'
+import Hotel from './screen/Hotel'
+import Hotel_info_screens from './screen/Hotel_info_screens'
+import ExploreScreen from './screen/ExploreScreen'
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} 
-        options = {({navigation}) => ({ headerTitle: () => <HomeTitle  /> ,
-          headerRight: () => (
-           <Button
-           onPress={() => navigation.navigate('Details')}
-           title="Info"
-           color="#111"
-           />
-         ),
-        })}/>
-        <Stack.Screen name="Details" 
-        component={DetailsScreen}
-        options={{ headerTitle: () => <LogoTitle  /> ,
-                   headerRight: () => (
-                    <Button
-                    onPress={() => alert('This is a button!')}
-                    title="Info"
-                    color="#111"
-                    />
-                  ),
-        }}
-         />
-      </Stack.Navigator>
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <Stack.Navigator initialRouteName="Hotel">
+    //     <Stack.Screen name="Hotel" component={Hotel} 
+    //     options = {({navigation}) => ({ headerTitle: () => <HomeTitle  /> ,
+    //       headerRight: () => (
+    //        <Button
+    //        onPress={() => navigation.navigate('Details')}
+    //        title="Info"
+    //        color="#111"
+    //        />
+    //      ),
+    //     })}/>
+    //     <Stack.Screen name="Details" 
+    //     component={DetailsScreen}
+    //     options={{ headerTitle: () => <LogoTitle  /> ,
+    //                headerRight: () => (
+    //                 <Button
+    //                 onPress={() => alert('This is a button!')}
+    //                 title="Info"
+    //                 color="#111"
+    //                 />
+    //               ),
+    //     }}
+    //      />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+    //  <WelcomeScreen />
+    // <Hotel/>
+   // <ExploreScreen/>
+  //  <DetailsScreen/>
+  <Hotel_info_screens />
   );
 }
 
